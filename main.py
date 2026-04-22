@@ -51,7 +51,6 @@ async def main():
         await page.wait_for_timeout(500)
  
         for i, row in enumerate(records, 1):
-            print(f"Runda {i:2d}/10 → {row['First Name']} {row['Last Name']}")
             await fill_form(page, row)
  
         await page.wait_for_timeout(5000)
